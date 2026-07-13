@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - favicon.svg
+
+website:
+  title: "Weijie Zhou"
+  description: "Academic website of Weijie Zhou, an undergraduate student in Kinesiology at Shanghai University of Sport."
+  site-url: "https://scarf-0.github.io"
+  favicon: favicon.svg
+  open-graph:
+    locale: en_US
+    site-name: "Weijie Zhou"
+  twitter-card: true
+  search: false
+  navbar:
+    pinned: true
+    left:
+      - href: index.qmd
+        text: Home
+  page-footer:
+    left: "© 2026 Weijie Zhou"
+    right: "Built with [Quarto](https://quarto.org/)"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true
+    lang: en
+
+execute:
+  freeze: auto
