@@ -5,7 +5,7 @@ This repository contains the source for Weijie Zhou's academic website, built wi
 ## Local preview
 
 ```bash
-./preview.sh
+bash preview.sh
 ```
 
 ## Update the website
@@ -15,7 +15,7 @@ Edit `index.qmd`, preview the change locally, then commit and push it to `main`.
 To rebuild and deploy the current version directly to Cloudflare Pages:
 
 ```bash
-./deploy.sh
+bash deploy.sh
 ```
 
 ## Content
