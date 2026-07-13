@@ -1,0 +1,17 @@
+---
+title: "Page not found"
+page-layout: full
+---
+
+::: {.not-found}
+::: {.eyebrow}
+404
+:::
+
+# This page could not be found.
+
+The page may have moved, or the address may be incomplete.
+
+[Return home](index.qmd){.button .button-primary}
+:::
+
