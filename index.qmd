@@ -8,9 +8,7 @@ title-block-style: none
 ::: {.profile-layout}
 ::: {.profile-sidebar}
 ::: {.profile-card}
-::: {.profile-photo aria-label="Profile photo placeholder"}
-WZ
-:::
+<img class="profile-photo" src="assets/profile.JPG" alt="Portrait of Weijie Zhou">
 
 # Weijie Zhou
 
@@ -21,9 +19,9 @@ Shanghai University of Sport
 :::
 
 ::: {.profile-links}
-[Email](mailto:24630315@sus.edu.cn){.profile-link}
-[GitHub](https://github.com/Scarf-0){.profile-link}
-[Scholar](https://scholar.google.com/citations?user=gH0O28cAAAAJ&hl=en){.profile-link}
+<a class="profile-link" href="mailto:24630315@sus.edu.cn"><img src="assets/icon-email.svg" alt="">Email</a>
+<a class="profile-link" href="https://github.com/Scarf-0"><img src="assets/icon-github.svg" alt="">GitHub</a>
+<a class="profile-link" href="https://scholar.google.com/citations?user=gH0O28cAAAAJ&hl=en"><img src="assets/icon-scholar.svg" alt="">Google Scholar</a>
 :::
 :::
 :::
@@ -36,9 +34,7 @@ I am an undergraduate student majoring in Kinesiology at the School of Exercise 
 ## Education
 
 ::: {.entry}
-::: {.entry-mark}
-SUS
-:::
+<img class="entry-logo" src="assets/sus-logo.png" alt="Shanghai University of Sport logo">
 
 ::: {.entry-body}
 ### Shanghai University of Sport
@@ -71,6 +67,26 @@ The mechanics of running and their relationship with movement strategies and per
 **Optimal Control**
 
 Optimization-based methods for understanding and predicting movement.
+:::
+:::
+
+## Published Papers
+
+::: {.publication-entry}
+::: {.publication-year}
+2026
+:::
+
+::: {.publication-body}
+### [Effects of different post-activation potentiation strategies on forehand stroke performance in elite squash players: a muscle synergy and time-frequency coherence analysis](https://doi.org/10.1186/s13102-025-01487-7)
+
+**Weijie Zhou**, Xinyu Lin, Haojie Li, Xie Wu, and Jian Jiang  
+*BMC Sports Science, Medicine and Rehabilitation*, **18**, 87 (2026).  
+<span class="author-note">Co-first author</span>
+
+[DOI](https://doi.org/10.1186/s13102-025-01487-7){.paper-link}
+[Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=gH0O28cAAAAJ&citation_for_view=gH0O28cAAAAJ:u5HHmVD_uO8C){.paper-link}
+[Full text](https://link.springer.com/article/10.1186/s13102-025-01487-7){.paper-link}
 :::
 :::
 
