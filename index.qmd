@@ -1,0 +1,83 @@
+---
+title: "Weijie Zhou"
+description: "Undergraduate student in Kinesiology at Shanghai University of Sport."
+page-layout: full
+title-block-style: none
+---
+
+::: {.profile-layout}
+::: {.profile-sidebar}
+::: {.profile-card}
+::: {.profile-photo aria-label="Profile photo placeholder"}
+WZ
+:::
+
+# Weijie Zhou
+
+Undergraduate Student in Kinesiology
+
+::: {.profile-location}
+Shanghai University of Sport
+:::
+
+::: {.profile-links}
+[Email](mailto:24630315@sus.edu.cn){.profile-link}
+[GitHub](https://github.com/Scarf-0){.profile-link}
+[Scholar](https://scholar.google.com/citations?user=gH0O28cAAAAJ&hl=en){.profile-link}
+:::
+:::
+:::
+
+::: {.profile-content}
+## About
+
+I am an undergraduate student majoring in Kinesiology at the School of Exercise and Health, Shanghai University of Sport. My research interests center on sports biomechanics, with a particular interest in musculoskeletal simulation, running biomechanics, and optimal control.
+
+## Education
+
+::: {.entry}
+::: {.entry-mark}
+SUS
+:::
+
+::: {.entry-body}
+### Shanghai University of Sport
+
+**BSc Student in Kinesiology**  
+School of Exercise and Health
+
+::: {.entry-date}
+September 2024 – Present
+:::
+:::
+:::
+
+## Research Interests
+
+::: {.interest-list}
+::: {.interest-row}
+**Musculoskeletal Simulation**
+
+Computational approaches to muscle function, joint loading, and human movement.
+:::
+
+::: {.interest-row}
+**Running Biomechanics**
+
+The mechanics of running and their relationship with movement strategies and performance.
+:::
+
+::: {.interest-row}
+**Optimal Control**
+
+Optimization-based methods for understanding and predicting movement.
+:::
+:::
+
+## Projects
+
+::: {.quiet-note}
+Projects will be added as they become available. Code and learning notes can be found on [GitHub](https://github.com/Scarf-0).
+:::
+:::
+:::
