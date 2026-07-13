@@ -1,6 +1,6 @@
 /.quarto/
 /_site/
 /.DS_Store
-
+/.wrangler/
 
 **/*.quarto_ipynb
